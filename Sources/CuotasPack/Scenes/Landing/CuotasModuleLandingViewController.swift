@@ -5,8 +5,8 @@
 //  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
 //
 
-import BasicCommons
-import BasicUIElements
+import CommonsPack
+import UIElementsPack
 import Lottie
 
 protocol CuotasModuleLandingDisplayLogic: AnyObject {

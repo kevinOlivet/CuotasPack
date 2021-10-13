@@ -5,8 +5,8 @@
 //  Copyright © 2020 Jon Olivet. All rights reserved.
 //
 
-import BasicCommons
-import BasicUIElements
+import CommonsPack
+import UIElementsPack
 
 /// Class for the CuotasModuleFactory
 public class CuotasModuleFactory {

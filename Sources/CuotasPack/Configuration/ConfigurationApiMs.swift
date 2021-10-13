@@ -5,7 +5,7 @@
 //  Copyright © 2020 Jon Olivet. All rights reserved.
 //
 
-import BasicCommons
+import CommonsPack
 
 // MARK: - URL building
 extension Configuration.Api {

@@ -5,7 +5,7 @@
 //  Created by Jon Olivet on 8/28/18.
 //
 
-import BasicCommons
+import CommonsPack
 import OHHTTPStubs
 
 public class CuotasModuleStubs: NSObject {

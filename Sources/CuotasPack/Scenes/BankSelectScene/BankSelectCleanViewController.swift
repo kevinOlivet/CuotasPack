@@ -6,8 +6,8 @@
 //  Copyright (c) 2018 Jon Olivet. All rights reserved.
 //
 
-import BasicCommons
-import BasicUIElements
+import CommonsPack
+import UIElementsPack
 import Alamofire
 import AlamofireImage
 

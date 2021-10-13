@@ -1,3 +1,3 @@
 # CuotasPack
 
-A description of this package.
+Experiment with Cuotas using Swift Package Manager.

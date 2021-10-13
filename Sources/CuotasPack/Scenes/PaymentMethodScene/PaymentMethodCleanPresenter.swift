@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 Jon Olivet. All rights reserved.
 //
 
-import BasicUIElements
+import UIElementsPack
 
 protocol PaymentMethodCleanPresentationLogic {
     func presentSetupUI(response: PaymentMethodClean.Texts.Response)

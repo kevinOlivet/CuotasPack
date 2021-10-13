@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 Jon Olivet. All rights reserved.
 //
 
-import BasicUIElements
+import UIElementsPack
 
 protocol EnterAmountCleanPresentationLogic {
     func presentSetUpUI(response: EnterAmountClean.Texts.Response)

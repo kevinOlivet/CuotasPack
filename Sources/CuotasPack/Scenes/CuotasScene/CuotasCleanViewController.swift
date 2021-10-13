@@ -6,8 +6,8 @@
 //  Copyright (c) 2018 Jon Olivet. All rights reserved.
 //
 
-import BasicCommons
-import BasicUIElements
+import CommonsPack
+import UIElementsPack
 
 protocol CuotasCleanDisplayLogic: class {
     func displaySetUpUI(viewModel: CuotasClean.Texts.ViewModel)
