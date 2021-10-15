@@ -16,10 +16,10 @@ class BankSelectCleanWorker {
     func getBankSelect(
         selectedPaymentMethodId: String,
         successCompletion: @escaping ([BankSelectModel]?) -> Void,
-        failureCompletion: @escaping (NTError) -> Void
+        failureCompletion: @escaping (APIManagerError) -> Void
     ) {
         guard reachability.isConnectedToNetwork() == true else {
-            failureCompletion(NTError.noInternetConection)
+            failureCompletion(APIManagerError(.NO_INTERNET))
             return
         }
         repo.getBankSelect(
