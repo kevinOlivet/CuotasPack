@@ -103,7 +103,7 @@ public class CuotasModuleStubs: NSObject {
                     code: URLError.notConnectedToInternet.rawValue
                 )
 
-                return OHHTTPStubsResponse(error: notConnectedError)
+                return HTTPStubsResponse(error: notConnectedError)
             }
         } else {
             newDescriptor = stub(condition: isPath(stubUrl.path)) { _ in

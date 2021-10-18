@@ -12,7 +12,7 @@ import Alamofire
 import AlamofireImage
 import UIKit
 
-protocol BankSelectCleanDisplayLogic: class {
+protocol BankSelectCleanDisplayLogic: AnyObject {
     func displaySetUpUI(viewModel: BankSelectClean.Texts.ViewModel)
     func displayLoadingView()
     func hideLoadingView()

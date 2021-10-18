@@ -37,7 +37,7 @@ extension Configuration.Api {
     }
 
     static var baseConfigurationDictionary: [String: Any] {
-        let baseConfigurationsResourcePath = Utils.bundle(forClass: CuotasModuleFactory.self)!.url(
+        let baseConfigurationsResourcePath = Bundle.module.url(
             forResource: "CuotasModule-Configuration",
             withExtension: "plist"
             )!

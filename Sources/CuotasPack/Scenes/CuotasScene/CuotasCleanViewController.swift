@@ -10,7 +10,7 @@ import CommonsPack
 import UIElementsPack
 import UIKit
 
-protocol CuotasCleanDisplayLogic: class {
+protocol CuotasCleanDisplayLogic: AnyObject {
     func displaySetUpUI(viewModel: CuotasClean.Texts.ViewModel)
     func displayLoadingView()
     func hideLoadingView()

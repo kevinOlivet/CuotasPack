@@ -29,6 +29,11 @@ let package = Package(
         ),
         .testTarget(
             name: "CuotasPackTests",
-            dependencies: ["CuotasPack"]),
+            dependencies: [
+                "CuotasPack",
+                "CommonsPack",
+                "UIElementsPack",
+            ]
+        ),
     ]
 )
