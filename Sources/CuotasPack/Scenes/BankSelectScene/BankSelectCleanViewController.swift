@@ -10,6 +10,7 @@ import CommonsPack
 import UIElementsPack
 import Alamofire
 import AlamofireImage
+import UIKit
 
 protocol BankSelectCleanDisplayLogic: class {
     func displaySetUpUI(viewModel: BankSelectClean.Texts.ViewModel)

@@ -7,6 +7,7 @@
 
 import CommonsPack
 import UIElementsPack
+import UIKit
 
 /// Class for the CuotasModuleFactory
 public class CuotasModuleFactory {

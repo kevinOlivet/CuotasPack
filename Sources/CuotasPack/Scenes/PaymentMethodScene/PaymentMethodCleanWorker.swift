@@ -14,10 +14,10 @@ class PaymentMethodCleanWorker {
 
     func getPaymentMethods(
         successCompletion: @escaping ([PaymentMethodModel]?) -> Void,
-        failureCompletion: @escaping (NTError) -> Void
+        failureCompletion: @escaping (APIManagerError) -> Void
     ) {
         guard reachability.isConnectedToNetwork() == true else {
-            failureCompletion(NTError.noInternetConection)
+            failureCompletion(APIManagerError(.NO_INTERNET))
             return
         }
         repo.getPaymentMethods(

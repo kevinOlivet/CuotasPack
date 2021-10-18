@@ -7,6 +7,7 @@
 //
 
 import UIElementsPack
+import UIKit
 
 enum BankSelectClean {
     // MARK: Use cases

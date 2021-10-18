@@ -7,9 +7,10 @@
 
 import CommonsPack
 import OHHTTPStubs
+import OHHTTPStubsSwift
 
 public class CuotasModuleStubs: NSObject {
-    private var registeredDescriptors: [String: OHHTTPStubsDescriptor] = [:]
+    private var registeredDescriptors: [String: HTTPStubsDescriptor] = [:]
 
     public var loggingEnabled: Bool // If false, no logging will be printed
     public var loggingVerbose: Bool // If false, will only log stub activations
@@ -59,7 +60,7 @@ public class CuotasModuleStubs: NSObject {
     }
 
     func enableStubsLogging() {
-        OHHTTPStubs.onStubActivation { request, descriptor, _ in
+        HTTPStubs.onStubActivation { request, descriptor, _ in
             self.log("--- Stub activation ---", isActivationLogging: true)
             self.log("NAME: \(descriptor.name ?? "Unknown name")", isActivationLogging: true)
             self.log("URL: \(String(describing: request.url?.absoluteString))", isActivationLogging: true)
@@ -67,7 +68,7 @@ public class CuotasModuleStubs: NSObject {
     }
 
     func disableStubsLogging() {
-        OHHTTPStubs.onStubActivation { _, _, _ in }
+        HTTPStubs.onStubActivation { _, _, _ in }
     }
 
     // MARK: - Helper methods
@@ -94,7 +95,7 @@ public class CuotasModuleStubs: NSObject {
             removeStub(stubName: stubName)
         }
 
-        let newDescriptor: OHHTTPStubsDescriptor
+        let newDescriptor: HTTPStubsDescriptor
         if failWithInternetError {
             newDescriptor = stub(condition: isPath(stubUrl.path)) { _ in
                 let notConnectedError = NSError(
@@ -134,7 +135,7 @@ public class CuotasModuleStubs: NSObject {
             return
         }
 
-        if OHHTTPStubs.removeStub(descriptor) {
+        if HTTPStubs.removeStub(descriptor) {
             self.log("removeStub() - Removed the stub with name: \(stubName).")
         } else {
             self.log("removeStub() - Couldn't remove the stub with name: \(stubName).")

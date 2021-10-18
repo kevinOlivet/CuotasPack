@@ -6,6 +6,7 @@
 //
 
 import CommonsPack
+import Foundation
 
 // MARK: - URL building
 extension Configuration.Api {

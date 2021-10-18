@@ -8,6 +8,7 @@
 
 import CommonsPack
 import UIElementsPack
+import UIKit
 
 protocol CuotasCleanDisplayLogic: class {
     func displaySetUpUI(viewModel: CuotasClean.Texts.ViewModel)

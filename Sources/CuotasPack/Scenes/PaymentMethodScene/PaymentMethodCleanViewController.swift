@@ -10,6 +10,7 @@ import CommonsPack
 import UIElementsPack
 import Alamofire
 import AlamofireImage
+import UIKit
 
 protocol PaymentMethodCleanDisplayLogic: class {
     func displaySetupUI(viewModel: PaymentMethodClean.Texts.ViewModel)

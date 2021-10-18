@@ -7,6 +7,7 @@
 //
 
 import CommonsPack
+import UIKit
 
 @objc
 public protocol EnterAmountCleanRoutingLogic {

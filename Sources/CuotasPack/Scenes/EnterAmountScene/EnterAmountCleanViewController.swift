@@ -8,6 +8,7 @@
 
 import CommonsPack
 import UIElementsPack
+import UIKit
 
 protocol EnterAmountCleanDisplayLogic: class {
     func displaySetUpUI(viewModel: EnterAmountClean.Texts.ViewModel)

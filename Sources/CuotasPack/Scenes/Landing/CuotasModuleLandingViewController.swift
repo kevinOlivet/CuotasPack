@@ -8,6 +8,7 @@
 import CommonsPack
 import UIElementsPack
 import Lottie
+import UIKit
 
 protocol CuotasModuleLandingDisplayLogic: AnyObject {
     func displaySetupUI(viewModel: CuotasModuleLanding.Basic.ViewModel)

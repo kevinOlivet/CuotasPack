@@ -15,11 +15,11 @@ class CuotasCleanWorker {
 
     func getCuotas(request: CuotasClean.Cuotas.Request,
                    successCompletion: @escaping ([CuotasResult]?) -> Void,
-                   failureCompletion: @escaping (NTError) -> Void) {
+                   failureCompletion: @escaping (APIManagerError) -> Void) {
 
         let bankSelectedId = (request.bankSelectedId != nil) ? request.bankSelectedId!.id :  ""
         guard reachability.isConnectedToNetwork() == true else {
-            failureCompletion(NTError.noInternetConection)
+            failureCompletion(APIManagerError(.NO_INTERNET))
             return
         }
         repo.getCuotas(
