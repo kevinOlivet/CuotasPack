@@ -117,7 +117,7 @@ extension BankSelectCleanViewController: UICollectionViewDataSource, UICollectio
     private static let cellIdentifier = "BankSelectCell"
     private func setupCollectionView() {
         let cellIdentifier = type(of: self).cellIdentifier
-        let bundle = Utils.bundle(forClass: type(of: self).classForCoder())
+        let bundle = Bundle.module
         let nib = UINib(nibName: cellIdentifier, bundle: bundle)
         bankCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
         bankCollectionView.reloadData()
@@ -136,7 +136,7 @@ extension BankSelectCleanViewController: UICollectionViewDataSource, UICollectio
             let bankSelectModel = bankSelectModelArray[indexPath.row]
             cell.bankNameLabel.text = bankSelectModel.name
             if let imageUrl = URL(string: bankSelectModel.secureThumbnail) {
-                cell.bankSelectImageView.af_setImage(
+                cell.bankSelectImageView.af.setImage(
                     withURL: imageUrl,
                     placeholderImage: MainAsset.noImage.image,
                     imageTransition: .flipFromBottom(0.5)
@@ -148,7 +148,7 @@ extension BankSelectCleanViewController: UICollectionViewDataSource, UICollectio
             if let selectedPaymentMethod = selectedPaymentMethod {
                 cell.bankNameLabel.text = selectedPaymentMethod.name
                 if let imageUrl = URL(string: selectedPaymentMethod.secureThumbnail) {
-                    cell.bankSelectImageView.af_setImage(
+                    cell.bankSelectImageView.af.setImage(
                         withURL: imageUrl,
                         placeholderImage: MainAsset.noImage.image,
                         imageTransition: .flipFromBottom(0.5)

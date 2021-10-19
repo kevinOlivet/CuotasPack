@@ -106,7 +106,7 @@ extension CuotasCleanViewController: UITableViewDataSource, UITableViewDelegate 
     private static let cellIdentifier = "CuotasCell"
     private func setupTableView() {
         let cellIdentifier = type(of: self).cellIdentifier
-        let bundle = Utils.bundle(forClass: type(of: self).classForCoder())
+        let bundle = Bundle.module
         let nib = UINib(nibName: cellIdentifier, bundle: bundle)
         cuotasTableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         cuotasTableView.reloadData()

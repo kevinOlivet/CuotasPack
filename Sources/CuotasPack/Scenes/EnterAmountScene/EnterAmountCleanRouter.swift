@@ -34,7 +34,7 @@ class EnterAmountCleanRouter: NSObject, EnterAmountCleanRoutingLogic, EnterAmoun
     }
     
     func routeToPaymentMethod() {
-        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Utils.bundle(forClass: PaymentMethodCleanViewController.classForCoder()))
+        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Bundle.module)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "PaymentMethodCleanViewController") as! PaymentMethodCleanViewController
         var destinationDS = destinationVC.router!.dataStore!
         

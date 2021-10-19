@@ -29,7 +29,7 @@ class PaymentMethodCleanRouter: NSObject, PaymentMethodCleanRoutingLogic, Paymen
     }
     
     func routeToBankSelect() {
-        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Utils.bundle(forClass: BankSelectCleanViewController.classForCoder()))
+        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Bundle.module)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "BankSelectCleanViewController") as! BankSelectCleanViewController
         var destinationDS = destinationVC.router!.dataStore!
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRO-Eu-gfV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRO-Eu-gfV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Enter Amount Clean View Controller-->
         <scene sceneID="koP-gm-f7S">
             <objects>
-                <viewController storyboardIdentifier="EnterAmountCleanViewController" id="dm2-DH-b8B" customClass="EnterAmountCleanViewController" customModule="CuotasModule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterAmountCleanViewController" id="dm2-DH-b8B" customClass="EnterAmountCleanViewController" customModule="CuotasPack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hO9-rx-T17">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c0-QM-K1e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c0-QM-K1e">
                                 <rect key="frame" x="50" y="481" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1D2-S1-LBg"/>
@@ -39,6 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ozV-8r-mo6"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MjQ-ef-KjJ" firstAttribute="leading" secondItem="ozV-8r-mo6" secondAttribute="leading" constant="16" id="0tw-dc-amL"/>
@@ -51,11 +52,10 @@
                             <constraint firstItem="qAd-m1-1Gh" firstAttribute="centerX" secondItem="hO9-rx-T17" secondAttribute="centerX" id="W0f-B4-dDj"/>
                             <constraint firstItem="7c0-QM-K1e" firstAttribute="centerX" secondItem="hO9-rx-T17" secondAttribute="centerX" id="Zjq-l8-KJw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ozV-8r-mo6"/>
                     </view>
                     <navigationItem key="navigationItem" id="ziY-f1-xnW"/>
                     <connections>
-                        <outlet property="enterAmountLabel" destination="MjQ-ef-KjJ" id="97g-Nd-LsJ"/>
+                        <outlet property="enterAmountLabel" destination="MjQ-ef-KjJ" id="HTB-pQ-IIu"/>
                         <outlet property="enterAmountTextField" destination="qAd-m1-1Gh" id="UKt-mj-ljG"/>
                         <outlet property="nextButton" destination="7c0-QM-K1e" id="P9J-Ie-DKc"/>
                         <segue destination="XuJ-RS-WZA" kind="show" identifier="ShowPaymentMethod" id="Rcf-b3-QJo"/>
@@ -68,7 +68,7 @@
         <!--Payment Method Clean View Controller-->
         <scene sceneID="HYJ-3L-uJ8">
             <objects>
-                <viewController storyboardIdentifier="PaymentMethodCleanViewController" id="XuJ-RS-WZA" customClass="PaymentMethodCleanViewController" customModule="CuotasModule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentMethodCleanViewController" id="XuJ-RS-WZA" customClass="PaymentMethodCleanViewController" customModule="CuotasPack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hcd-Yr-73Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +82,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="cEu-Ue-P6J"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cOq-oo-Umi" firstAttribute="trailing" secondItem="cEu-Ue-P6J" secondAttribute="trailing" id="ZoZ-o6-JrK"/>
@@ -89,7 +90,6 @@
                             <constraint firstItem="cOq-oo-Umi" firstAttribute="top" secondItem="cEu-Ue-P6J" secondAttribute="top" id="kfc-sN-lEH"/>
                             <constraint firstItem="cOq-oo-Umi" firstAttribute="bottom" secondItem="hcd-Yr-73Q" secondAttribute="bottom" id="vS1-i4-IWR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="cEu-Ue-P6J"/>
                     </view>
                     <navigationItem key="navigationItem" id="mX2-oH-6YQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="t5O-eG-HOL"/>
@@ -106,7 +106,7 @@
         <!--Bank Select Clean View Controller-->
         <scene sceneID="Rc7-Bd-PwZ">
             <objects>
-                <viewController storyboardIdentifier="BankSelectCleanViewController" id="8lc-aE-Xci" customClass="BankSelectCleanViewController" customModule="CuotasModule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BankSelectCleanViewController" id="8lc-aE-Xci" customClass="BankSelectCleanViewController" customModule="CuotasPack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbs-A2-6IQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="RS6-tj-mpz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="O2l-7U-vbV" firstAttribute="top" secondItem="RS6-tj-mpz" secondAttribute="top" id="VwF-KE-hFa"/>
@@ -134,7 +135,6 @@
                             <constraint firstItem="O2l-7U-vbV" firstAttribute="trailing" secondItem="RS6-tj-mpz" secondAttribute="trailing" id="fpr-7L-5LF"/>
                             <constraint firstItem="O2l-7U-vbV" firstAttribute="leading" secondItem="RS6-tj-mpz" secondAttribute="leading" id="fsc-ek-1QA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RS6-tj-mpz"/>
                     </view>
                     <navigationItem key="navigationItem" id="d0x-mO-zYC">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="dHD-NJ-fYs"/>
@@ -151,7 +151,7 @@
         <!--Cuotas Clean View Controller-->
         <scene sceneID="fQZ-kV-EuO">
             <objects>
-                <viewController storyboardIdentifier="CuotasCleanViewController" id="3aj-cL-Odb" customClass="CuotasCleanViewController" customModule="CuotasModule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CuotasCleanViewController" id="3aj-cL-Odb" customClass="CuotasCleanViewController" customModule="CuotasPack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PWG-Za-Jgi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +165,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Yj-ss-tWf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dOr-hb-6BZ" firstAttribute="trailing" secondItem="3Yj-ss-tWf" secondAttribute="trailing" id="WqL-EL-jQI"/>
@@ -172,7 +173,6 @@
                             <constraint firstItem="dOr-hb-6BZ" firstAttribute="leading" secondItem="3Yj-ss-tWf" secondAttribute="leading" id="a2i-vt-dea"/>
                             <constraint firstItem="dOr-hb-6BZ" firstAttribute="bottom" secondItem="PWG-Za-Jgi" secondAttribute="bottom" id="x7i-AB-aC8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3Yj-ss-tWf"/>
                     </view>
                     <navigationItem key="navigationItem" id="5yu-b8-Am6">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="O4t-f6-Bjf"/>

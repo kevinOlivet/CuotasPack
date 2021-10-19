@@ -28,7 +28,7 @@ class BankSelectCleanRouter: NSObject, BankSelectCleanRoutingLogic, BankSelectCl
     }
     
     func routeToCuotas() {
-        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Utils.bundle(forClass: CuotasCleanViewController.classForCoder()))
+        let storyboard = UIStoryboard(name: "CuotasMain", bundle: Bundle.module)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "CuotasCleanViewController") as! CuotasCleanViewController
         var destinationDS = destinationVC.router!.dataStore!
         

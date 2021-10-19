@@ -10,7 +10,7 @@ import CommonsPack
 import UIElementsPack
 import UIKit
 
-protocol EnterAmountCleanDisplayLogic: class {
+protocol EnterAmountCleanDisplayLogic: AnyObject {
     func displaySetUpUI(viewModel: EnterAmountClean.Texts.ViewModel)
     func catchCuota(notification: Notification)
     func displayTextFieldWithRegexNumber(viewModel: EnterAmountClean.Regex.ViewModel)

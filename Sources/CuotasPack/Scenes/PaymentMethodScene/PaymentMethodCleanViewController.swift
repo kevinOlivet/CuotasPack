@@ -12,7 +12,7 @@ import Alamofire
 import AlamofireImage
 import UIKit
 
-protocol PaymentMethodCleanDisplayLogic: class {
+protocol PaymentMethodCleanDisplayLogic: AnyObject {
     func displaySetupUI(viewModel: PaymentMethodClean.Texts.ViewModel)
     func displayLoadingView()
     func hideLoadingView()
@@ -132,7 +132,7 @@ extension PaymentMethodCleanViewController: UITableViewDataSource, UITableViewDe
     private static let cellIdentifier = "PaymentMethodCell"
     private func setupTableView() {
         let cellIdentifier = type(of: self).cellIdentifier
-        let bundle = Utils.bundle(forClass: type(of: self).classForCoder())
+        let bundle = Bundle.module
         let nib = UINib(nibName: cellIdentifier, bundle: bundle)
         paymentTableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         paymentTableView.reloadData()
@@ -150,7 +150,7 @@ extension PaymentMethodCleanViewController: UITableViewDataSource, UITableViewDe
         let paymentMethod = paymentMethodsToDisplay[indexPath.row]
         cell.paymentMethodNameLabel.text = paymentMethod.name
         if let imageUrl = URL(string: paymentMethod.secureThumbnail) {
-            cell.paymentImageView.af_setImage(
+            cell.paymentImageView.af.setImage(
                 withURL: imageUrl,
                 placeholderImage: MainAsset.noImage.image,
                 imageTransition: .flipFromBottom(0.5)

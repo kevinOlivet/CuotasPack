@@ -26,7 +26,7 @@ class CuotasModuleLandingRouter: NSObject, CuotasModuleLandingRoutingLogic, Cuot
     func routeToCuotasModule() {
         let storyboard = UIStoryboard(
             name: "CuotasMain",
-            bundle: Utils.bundle(forClass: EnterAmountCleanViewController.classForCoder())
+            bundle: Bundle.module
         )
         let destinationNVC = storyboard.instantiateInitialViewController() as! UINavigationController
         destinationNVC.modalPresentationStyle = .fullScreen

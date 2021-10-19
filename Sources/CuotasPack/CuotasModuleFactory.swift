@@ -38,7 +38,7 @@ private class CuotasModuleMainNavigationController: UINavigationController {
             image: MainAsset.tabHome.image,
             tag: 0
         )
-        let bundleToUse = Utils.bundle(forClass: CuotasModuleLandingViewController.classForCoder())
+        let bundleToUse = Bundle.module
         super.init(nibName: "CuotasModuleLandingViewController", bundle: bundleToUse)
     }
 

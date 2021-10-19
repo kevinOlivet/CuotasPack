@@ -31,7 +31,7 @@ class CuotasModuleLandingViewController: BaseViewController, CuotasModuleLanding
     }
 
     init() {
-        let bundleToUse = Utils.bundle(forClass: CuotasModuleLandingViewController.classForCoder())
+        let bundleToUse = Bundle.module
         super.init(nibName: "CuotasModuleLandingViewController", bundle: bundleToUse)
         setup()
     }
