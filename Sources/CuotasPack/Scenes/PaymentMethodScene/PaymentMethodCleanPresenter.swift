@@ -7,6 +7,7 @@
 //
 
 import UIElementsPack
+import Foundation
 
 protocol PaymentMethodCleanPresentationLogic {
     func presentSetupUI(response: PaymentMethodClean.Texts.Response)
@@ -43,9 +44,9 @@ class PaymentMethodCleanPresenter: PaymentMethodCleanPresentationLogic {
     }
     func presentAmountErrorAlert(response: PaymentMethodClean.PaymentMethodsDetails.Response.AmountFailure) {
         let viewModel = PaymentMethodClean.PaymentMethodsDetails.ViewModel.AmountFailure(
-            errorTitle: response.errorTitle.localized,
-            errorMessage: response.errorMessage.localized,
-            buttonTitle: response.buttonTitle.localized,
+            errorTitle: NSLocalizedString(response.errorTitle, bundle: .module, comment: ""),
+            errorMessage: NSLocalizedString(response.errorMessage, bundle: .module, comment: ""),
+            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: ""),
             image: MainAsset.iconCloseBlack.image
         )
         viewController?.displayAmountErrorAlert(viewModel: viewModel)

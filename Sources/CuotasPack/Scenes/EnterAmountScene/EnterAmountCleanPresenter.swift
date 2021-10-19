@@ -7,6 +7,7 @@
 //
 
 import UIElementsPack
+import Foundation
 
 protocol EnterAmountCleanPresentationLogic {
     func presentSetUpUI(response: EnterAmountClean.Texts.Response)
@@ -23,9 +24,9 @@ class EnterAmountCleanPresenter: EnterAmountCleanPresentationLogic {
     // MARK: Methods
     func presentSetUpUI(response: EnterAmountClean.Texts.Response) {
         let viewModel = EnterAmountClean.Texts.ViewModel(
-            title: response.title.localized,
-            enterAmountLabel: response.enterAmountLabel.localized,
-            nextButton: response.nextButton.localized
+            title: NSLocalizedString(response.title, bundle: .module, comment: ""),
+            enterAmountLabel: NSLocalizedString(response.enterAmountLabel, bundle: .module, comment: ""),
+            nextButton: NSLocalizedString(response.nextButton, bundle: .module, comment: "")
         )
         viewController?.displaySetUpUI(viewModel: viewModel)
     }
@@ -41,18 +42,18 @@ class EnterAmountCleanPresenter: EnterAmountCleanPresentationLogic {
     
     func presentCatchCuotaAlert(response: EnterAmountClean.CatchNotification.Response) {
         let viewModel = EnterAmountClean.CatchNotification.ViewModel(
-            successTitle: response.successTitle.localized,
-            successMessage: response.successMessage.localized,
-            buttonTitle: response.buttonTitle.localized
+            successTitle: NSLocalizedString(response.successTitle, bundle: .module, comment: ""),
+            successMessage: NSLocalizedString(response.successMessage, bundle: .module, comment: ""),
+            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: "")
         )
         viewController?.displayCatchCuotaAlert(viewModel: viewModel)
     }
     
     func presentInputAlert(response: EnterAmountClean.Errors.Response) {
         let viewModel = EnterAmountClean.Errors.ViewModel(
-            errorTitle: response.errorTitle.localized,
-            errorMessage: response.errorMessage.localized,
-            buttonTitle: response.buttonTitle.localized,
+            errorTitle: NSLocalizedString(response.errorTitle, bundle: .module, comment: ""),
+            errorMessage: NSLocalizedString(response.errorMessage, bundle: .module, comment: ""),
+            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: ""),
             image: MainAsset.iconCloseBlack.image
         )
         viewController?.displayInputAlert(viewModel: viewModel)

@@ -17,10 +17,9 @@ class CuotasModuleLandingPresenter: CuotasModuleLandingPresentationLogic {
     // MARK: Methods
 
     func presentSetupUI(response: CuotasModuleLanding.Basic.Response) {
-        let title = NSLocalizedString(response.title, bundle: .module, comment: "")
         let viewModel = CuotasModuleLanding.Basic.ViewModel(
-            title: title,
-            subtitle: response.subtitle.localized
+            title: NSLocalizedString(response.title, bundle: .module, comment: ""),
+            subtitle: NSLocalizedString(response.subtitle, bundle: .module, comment: "")
         )
         viewController?.displaySetupUI(viewModel: viewModel)
     }

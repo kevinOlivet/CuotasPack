@@ -42,7 +42,7 @@ class CuotasCleanPresenter: CuotasCleanPresentationLogic {
         var displayCuotasArray: [CuotasClean.Cuotas.ViewModel.DisplayCuota] = []
         for displayCuota in response.cuotasModelArray {
             let cuota = CuotasClean.Cuotas.ViewModel.DisplayCuota(
-                installments: "INSTALLMENTS".localized + "\(String(displayCuota.installments))",
+                installments: NSLocalizedString("INSTALLMENTS", bundle: .module, comment: "") + "\(String(displayCuota.installments))",
                 recommendedMessage: displayCuota.recommendedMessage
             )
             displayCuotasArray.append(cuota)
