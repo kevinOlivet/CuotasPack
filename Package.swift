@@ -13,10 +13,10 @@ let package = Package(
             targets: ["CuotasPack"]),
     ],
     dependencies: [
-        .package(name: "CommonsPack", path: "../CommonsPack"),
-        .package(name: "UIElementsPack", path: "../UIElementsPack"),
-//        .package(url: "https://github.com/kevinOlivet/CommonsPack.git", .upToNextMajor(from: "1.0.0")),
-//        .package(url: "https://github.com/kevinOlivet/UIElementsPack.git", .upToNextMajor(from: "1.0.0"))
+//        .package(name: "CommonsPack", path: "../CommonsPack"),
+//        .package(name: "UIElementsPack", path: "../UIElementsPack"),
+        .package(url: "https://github.com/kevinOlivet/CommonsPack.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/kevinOlivet/UIElementsPack.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
         .target(
