@@ -23,7 +23,6 @@ let package = Package(
             name: "CuotasPack",
             dependencies: ["CommonsPack", "UIElementsPack"],
             resources: [
-//                .copy("Resources")
                 .process("Resources")
             ]
         ),

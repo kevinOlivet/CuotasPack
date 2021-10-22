@@ -44,9 +44,9 @@ class PaymentMethodCleanPresenter: PaymentMethodCleanPresentationLogic {
     }
     func presentAmountErrorAlert(response: PaymentMethodClean.PaymentMethodsDetails.Response.AmountFailure) {
         let viewModel = PaymentMethodClean.PaymentMethodsDetails.ViewModel.AmountFailure(
-            errorTitle: NSLocalizedString(response.errorTitle, bundle: .module, comment: ""),
-            errorMessage: NSLocalizedString(response.errorMessage, bundle: .module, comment: ""),
-            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: ""),
+            errorTitle: response.errorTitle.localized(in: .module),
+            errorMessage: response.errorMessage.localized(in: .module),
+            buttonTitle: response.buttonTitle.localized(in: .module),
             image: MainAsset.iconCloseBlack.image
         )
         viewController?.displayAmountErrorAlert(viewModel: viewModel)

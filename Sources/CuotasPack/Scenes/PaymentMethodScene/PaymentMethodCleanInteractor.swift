@@ -68,9 +68,9 @@ class PaymentMethodCleanInteractor: PaymentMethodCleanBusinessLogic, PaymentMeth
                 presenter?.showBankSelect(response: response)
             } else {
                 let errorMessage = "\(selectedPaymentMethod.name)"
-                    + NSLocalizedString("MINIMUM_MESSAGE", bundle: .module, comment: "")
+                    + "MINIMUM_MESSAGE".localized(in: .module)
                 + "\(String(format: "%.2f", selectedPaymentMethod.minAllowedAmount))"
-                    + NSLocalizedString("MAXIMUM_MESSAGE", bundle: .module, comment: "")
+                    + "MAXIMUM_MESSAGE".localized(in: .module)
                     + "\(String(format: "%.2f", selectedPaymentMethod.maxAllowedAmount))"
                 let response = PaymentMethodClean.PaymentMethodsDetails.Response.AmountFailure(
                     errorTitle: "CHOOSE_AGAIN",

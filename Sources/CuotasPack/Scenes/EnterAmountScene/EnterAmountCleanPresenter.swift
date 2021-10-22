@@ -24,9 +24,9 @@ class EnterAmountCleanPresenter: EnterAmountCleanPresentationLogic {
     // MARK: Methods
     func presentSetUpUI(response: EnterAmountClean.Texts.Response) {
         let viewModel = EnterAmountClean.Texts.ViewModel(
-            title: NSLocalizedString(response.title, bundle: .module, comment: ""),
-            enterAmountLabel: NSLocalizedString(response.enterAmountLabel, bundle: .module, comment: ""),
-            nextButton: NSLocalizedString(response.nextButton, bundle: .module, comment: "")
+            title: response.title.localized,
+            enterAmountLabel: response.enterAmountLabel.localized,
+            nextButton: response.nextButton.localized
         )
         viewController?.displaySetUpUI(viewModel: viewModel)
     }
@@ -42,18 +42,18 @@ class EnterAmountCleanPresenter: EnterAmountCleanPresentationLogic {
     
     func presentCatchCuotaAlert(response: EnterAmountClean.CatchNotification.Response) {
         let viewModel = EnterAmountClean.CatchNotification.ViewModel(
-            successTitle: NSLocalizedString(response.successTitle, bundle: .module, comment: ""),
-            successMessage: NSLocalizedString(response.successMessage, bundle: .module, comment: ""),
-            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: "")
+            successTitle: response.successTitle.localized(in: .module),
+            successMessage: response.successMessage.localized(in: .module),
+            buttonTitle: response.buttonTitle.localized(in: .module)
         )
         viewController?.displayCatchCuotaAlert(viewModel: viewModel)
     }
     
     func presentInputAlert(response: EnterAmountClean.Errors.Response) {
         let viewModel = EnterAmountClean.Errors.ViewModel(
-            errorTitle: NSLocalizedString(response.errorTitle, bundle: .module, comment: ""),
-            errorMessage: NSLocalizedString(response.errorMessage, bundle: .module, comment: ""),
-            buttonTitle: NSLocalizedString(response.buttonTitle, bundle: .module, comment: ""),
+            errorTitle: response.errorTitle.localized(in: .module),
+            errorMessage: response.errorMessage.localized(in: .module),
+            buttonTitle: response.buttonTitle.localized(in: .module),
             image: MainAsset.iconCloseBlack.image
         )
         viewController?.displayInputAlert(viewModel: viewModel)
